@@ -6,6 +6,27 @@ const { melon_data: song_array } = require("./melon_data");
 // ref: https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Set
 
 
+const artist = song_array
+// .map(({artist})=> artist)
+.reduce((acc, {artist}) => {
+    acc.add(artist);
+    return acc;
+}, new Set())
+.size;
+
+console.log(`'artist_count': ${artist_count}`);
+
+
+const artist_set = new Set(artist);
+artiest_set.size
+console.log(artiest_Set.size);
+
+
+
+
+
+
+
 const artist_array = song_array.map(({ artist }) => artist);
 const total1 = new Set(artist_array).size;
 

@@ -5,12 +5,10 @@ const { melon_data: song_array } = require("./melon_data");
 // Array의 filter와 map 활용
 // 출력포맷 : [곡명1, 곡명2, 곡명3]
 
+song_array
+.filter( ({title}) => song.title.indexOf("사랑")
+.map( ({title}) => title )
+);
 
-const lovesong_title_array = song_array
-    .filter(({ title }) => title.includes("사랑"))
-    .map(({ title }) => title);
-
-
-for (const title of lovesong_title_array) {
-    console.log(title);
-}
+// polyfill
+// 하위 호환성을 보장해주는 라이브러리
