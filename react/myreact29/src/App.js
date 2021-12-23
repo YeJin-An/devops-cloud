@@ -13,9 +13,20 @@ function Counter() {
     setColor(value % 2 === 0 ? 'lightgreen' : 'lightpink');
   };
   return (
-    <div style={{ backgroundColor: color }}>
-      카운더: {value}
-      <button onClick={handleClick}>증가</button>
+    <div
+      style={{
+        backgroundColor: color,
+        width: 35,
+        height: 40,
+        display: 'inline-block',
+        margin: 15,
+        borderRadius: 50,
+        textAlign: 'center',
+        userSelect: 'none',
+      }}
+      onClick={handleClick}
+    >
+      <span>{value}</span>
     </div>
   );
 }
