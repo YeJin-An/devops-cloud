@@ -1,7 +1,8 @@
 // 전역변수 : 바뀌지 않는 데이터
 
 import { useState } from 'react';
-import { button } from 'react-bootstrap';
+import { Button as BootstrapButton } from 'react-bootstrap';
+import { Button as AntdButton } from 'antd';
 import InitalSongList from './data/melon_data.json';
 import './MelonTop10.css';
 
@@ -16,11 +17,18 @@ function MelonTop10() {
   return (
     <div>
       <h2>melon top10</h2>
-      <Button onClick={handleClick}>로딩</Button>
+
+      <BootstrapButton variant="success" onClick={handleClick}>
+        로딩
+      </BootstrapButton>
+      <AntdButton type="primary" onClick={handleClick}>
+        로딩
+      </AntdButton>
+
       <ul className="songList">
         {songList.map((song) => {
           return (
-            <li>
+            <li key={song.song_no}>
               {song.rank}
               {song.title} [by] {song.artist} {song.like}
             </li>
