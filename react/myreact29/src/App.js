@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+
+// 리액트 컴포넌트 생성
+function Counter() {
+  const [value, setValue] = useState(0); // 참조할 수 있도록 한다.
+  // 벨류에 대한 설정하는 set벨류로 선택 값 지정
+  const [color, setColor] = useState('skyblue');
+
+  // 새로운 정의 함수
+  const handleClick = () => {
+    console.log(`clicked`);
+    setValue(value + 1);
+    setColor(value % 2 === 0 ? 'lightgreen' : 'lightpink');
+  };
+  return (
+    <div style={{ backgroundColor: color }}>
+      카운더: {value}
+      <button onClick={handleClick}>증가</button>
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          안녕 리액트. 잘 부탁한다.
-        </a>
-      </header>
+    <div>
+      <h1> 안녕 리액트 </h1>
+      <Counter />
+      <Counter />
+      <Counter />
     </div>
   );
 }
