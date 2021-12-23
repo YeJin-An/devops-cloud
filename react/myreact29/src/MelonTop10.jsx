@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import InitalSongList from './data/melon_data.json';
+import './MelonTop10.css';
 
 //  js + json ==> <ul>[create]<li>
 function MelonTop10() {
@@ -15,11 +16,15 @@ function MelonTop10() {
     <div>
       <h2>melon top10</h2>
       <button onClick={handleClick}>로딩</button>
-      <ul>
+      <ul className="songList">
         {songList.map((song) => {
-          return <li>{song.title}</li>;
+          return (
+            <li>
+              {song.rank}
+              {song.title} [by] {song.artist} {song.like}
+            </li>
+          );
         })}
-        <li> title </li>
       </ul>
     </div>
   );
