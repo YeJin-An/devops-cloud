@@ -18,11 +18,17 @@ function Counter() {
         backgroundColor: color,
         width: 35,
         height: 40,
-        display: 'inline-block',
-        margin: 15,
-        borderRadius: 50,
-        textAlign: 'center',
-        userSelect: 'none',
+        display: 'inline-block', // 티스토리 85
+        // display[표시] VS visibility[요소 결졍]
+        margin: 15, // top, margin, borderm padding, content
+        // padding VS margin
+        borderRadius: 50, // px, % , ../..
+        // 사각형 모양 깍기 [ MDN ]
+        textAlign: 'center', // text-align 티스토리92
+        // left, right, center, justify[뚱뚱]
+        userSelect: 'none', // 사용자 text 선택 [지정]
+        // 키워드(none,auto,text,contain,all)
+        //   전역(inherit, initial,unset) [MDN]
       }}
       onClick={handleClick}
     >
