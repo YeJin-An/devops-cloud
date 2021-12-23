@@ -1,6 +1,7 @@
 // 전역변수 : 바뀌지 않는 데이터
 
 import { useState } from 'react';
+import { button } from 'react-bootstrap';
 import InitalSongList from './data/melon_data.json';
 import './MelonTop10.css';
 
@@ -15,7 +16,7 @@ function MelonTop10() {
   return (
     <div>
       <h2>melon top10</h2>
-      <button onClick={handleClick}>로딩</button>
+      <Button onClick={handleClick}>로딩</Button>
       <ul className="songList">
         {songList.map((song) => {
           return (
