@@ -8,7 +8,7 @@ function Counter() {
 
   // 새로운 정의 함수
   const handleClick = () => {
-    console.log(`clicked`);
+    console.log(`클릭`);
     setValue(value + 1);
     setColor(value % 2 === 0 ? 'lightgreen' : 'lightpink');
   };
