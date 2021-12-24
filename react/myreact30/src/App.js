@@ -1,13 +1,12 @@
-import Counter from './Counter';
+import PageAbout from './pages/PageAbout';
+import PageCounter from './pages/PageCounter';
 
 function App() {
   return (
     <>
-      <Counter initial={10} color={'lightblue'} />
-      <Counter initial={10} color={'lightpink'} />
-      <Counter initial={10} color={'lightgreen'} />
+      <PageAbout />
+      <PageCounter />
     </>
-    // 프레그 먼트?? -> Fragment
   );
 }
 
