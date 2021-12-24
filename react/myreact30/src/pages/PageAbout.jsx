@@ -1,7 +1,8 @@
 function PageAbout() {
   return (
     <div>
-      <h2>안녕</h2>
+      <h2>About</h2>
+      <p>fdahfoidhsfoif</p>
     </div>
   );
 }
