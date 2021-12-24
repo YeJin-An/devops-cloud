@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Counter({ initial }) {
+function Counter({ initial, color }) {
   // 속성값을 초기값으로 참조하여 상탯값 valude를 생성
   const [value, setValue] = useState(initial);
 
@@ -15,7 +15,7 @@ function Counter({ initial }) {
 
   return (
     <div
-      style={{ userSelect: 'none', curcsor: 'pointer' }}
+      style={{ ...style, backgroundColor: color }}
       oneClick={handleClick}
       onContextMenu={handleContextMenu}
     >
@@ -23,4 +23,18 @@ function Counter({ initial }) {
     </div>
   );
 }
+
+// 컴포넌트의 고정된 스타일을 지정할 때, 사용
+const style = {
+  width: '100px',
+  height: '100px',
+  borderRadius: '50px',
+  lineHeight: '100px',
+  textAlign: 'center',
+  display: 'inline-block',
+  fontSize: '3rem',
+  margin: '1rem',
+  userSelect: 'none',
+};
+
 export default Counter;
