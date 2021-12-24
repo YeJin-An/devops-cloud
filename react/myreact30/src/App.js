@@ -1,5 +1,5 @@
 function App() {
-  return <h1>리액트</h1>;
+  return;
 }
 
 export default App;
