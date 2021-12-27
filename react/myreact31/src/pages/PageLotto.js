@@ -11,31 +11,20 @@ function PageLotto() {
     { number: 16 },
     { number: 17 },
   ];
+
   return (
     <div>
       <div>
-        <h4>숫자: {number[0].number}</h4>
-      </div>
-      <div>
-        <h4>숫자: {number[1].number}</h4>
-      </div>
-      <div>
-        <h4>숫자: {number[2].number}</h4>
-      </div>
-      <div>
-        <h4>숫자: {number[3].number}</h4>
-      </div>
-      <div>
-        <h4>숫자: {number[4].number}</h4>
-      </div>
-      <div>
-        <h4>숫자: {number[5].number}</h4>
-      </div>
-      <div>
-        <h4>숫자: {number[6].number}</h4>
-      </div>
-      <div>
-        <h4>숫자: {number[7].number}</h4>
+        <span>
+          {number[0].number}
+          {number[1].number}
+          {number[2].number}
+          {number[3].number}
+          {number[4].number}
+          {number[5].number}
+          {number[6].number}
+          {number[7].number}
+        </span>
       </div>
     </div>
   );
