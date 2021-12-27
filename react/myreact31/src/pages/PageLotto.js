@@ -1,6 +1,6 @@
 import React from "react";
 
-function LottoList() {
+function PageLotto() {
   const number = [
     { number: 10 },
     { number: 11 },
@@ -41,4 +41,4 @@ function LottoList() {
   );
 }
 
-export default LottoList;
+export default PageLotto;

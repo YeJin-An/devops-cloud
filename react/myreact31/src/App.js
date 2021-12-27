@@ -1,5 +1,5 @@
 import React from "react";
-import PageLotto from "./pages/components/PageLotto";
+import PageLotto from "./pages/PageLotto";
 
 function App() {
   return <PageLotto />;
