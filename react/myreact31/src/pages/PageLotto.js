@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 function PageLotto() {
   const number = [
@@ -12,16 +12,16 @@ function PageLotto() {
     { number: 17 },
   ];
 
+  const [Lotto, setLotto] = useState();
+
+  function onClick() {
+    return setLotto(Math.floor(Math.random() * 101));
+  }
+
   return (
     <div class="wrapper">
-      <div>{number[0].number}</div>
-      <div>{number[1].number}</div>
-      <div>{number[2].number}</div>
-      <div>{number[3].number}</div>
-      <div>{number[4].number}</div>
-      <div>{number[5].number}</div>
-      <div>{number[6].number}</div>
-      <div>{number[7].number}</div>
+      <h2>{`${Lotto} ${Lotto} ${Lotto} ${Lotto} ${Lotto} ${Lotto} ${Lotto} ${Lotto}`}</h2>
+      <button onClick={onClick}>예지</button>
     </div>
   );
 }
