@@ -1,12 +1,20 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 
 class PageLotto extends Component {
-  render() {
-    const lotto = [10, 11, 12, 13, 14, 15, 16, 17];
-    const lottolist = lotto.map((lotto) => <h5>{lotto}</h5>);
+  state = {
+    number: [10, 11, 12, 13, 14, 15, 16],
+  };
 
-    return <ul>{lottolist}</ul>;
+  render() {
+    return (
+      <>
+        <ul>
+          {this.state.number.map((number) => {
+            return <h5>{number}</h5>;
+          })}
+        </ul>
+      </>
+    );
   }
 }
-
 export default PageLotto;
