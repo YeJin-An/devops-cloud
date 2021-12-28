@@ -13,19 +13,15 @@ function PageLotto() {
   ];
 
   return (
-    <div>
-      <div>
-        <span>
-          {number[0].number}
-          {number[1].number}
-          {number[2].number}
-          {number[3].number}
-          {number[4].number}
-          {number[5].number}
-          {number[6].number}
-          {number[7].number}
-        </span>
-      </div>
+    <div class="wrapper">
+      <div>{number[0].number}</div>
+      <div>{number[1].number}</div>
+      <div>{number[2].number}</div>
+      <div>{number[3].number}</div>
+      <div>{number[4].number}</div>
+      <div>{number[5].number}</div>
+      <div>{number[6].number}</div>
+      <div>{number[7].number}</div>
     </div>
   );
 }

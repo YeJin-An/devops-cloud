@@ -1,4 +1,4 @@
-.App(
+/* .App(
   font-family: sans-serif;
   text-align: center;
 ) .App div {
@@ -16,3 +16,27 @@
   height: 30px;
   background-color: red;
 }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  color: navy;
+  margin-left: 0px;
+  letter-spacing: 1px;
+  text-indent: 20px;
+}
+
+body {
+  background-color: lightblue;
+  font-family: Arial, sans-serif;
+  word-spacing: 20px;
+  text-align: justify;
+}
+
+h1 {
+  color: navy;
+  text-align: center;
+  margin-left: 0px;
+  letter-spacing: 5px;
+  text-indent: 50px;
+} */
