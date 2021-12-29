@@ -12,6 +12,7 @@ class invokeMethod extends Component {
         {(function () {
           if (value === 1) return <div>하나</div>;
         })()}
+
         {(() => {
           if (value === 1) return <div>둘</div>;
         })()}
