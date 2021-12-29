@@ -83,3 +83,31 @@ if (value === 1) return <div>둘</div>;
 })()}
 이름은 화살표 함수
 --> this.arguments, super 개념이 없는 익명 함수
+
+(6) 공백 출력 == {" "} of &nbsp
+
+(8) style과 className
+-> JSX에서는 객체 형태로 인라인 스타일을 작성해줘야 함.
+
+[ inlinestyle ]
+const style = {
+backgroundColor: 'black',
+padding: '16px'
+color: 'white'
+fontSize: '36px'
+}
+
+<div style={style}>안녕하세요!</div>;
+
+[CSS]
+.App{
+background: black;
+color: aqua;
+font-size: 36px;
+padding: 1rem;
+font-weight: 600;
+}
+
+정리:
+--> Vue OR Angular 역시
+React도 개발자를 위한 확장 프로그램 제공
