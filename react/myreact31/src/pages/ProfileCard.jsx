@@ -10,12 +10,15 @@ import {
   faSpinner,
 } from "@fortawesome/free-solid-svg-icons";
 
+import propTypes from "prop-types";
+
 function ProfileCard() {
-  const [profileimage, setprofileimage] = useState(0);
-  const [name, setname] = useState([]);
-  const [role, setrole] = useState([]);
-  const [facebookUrl, serfacebookUrl] = useState([]);
-  const [email, setemail] = useState([]);
+  
+  const profileimage;
+  const name;
+  const role;
+  const facebookUrl;
+  const email;
 
   const handleClick = (value) => {
     setprofileimage(useState(value + 1));
