@@ -1,18 +1,21 @@
 import React, { Component } from "react";
 // prop-types [ yarn add prop-types ]
 import PropTypes from "prop-types";
-import App from "../App";
-import { render } from "@testing-library/react";
 
 class invokeMethod extends Component {
-  getUrl() {
-    return "http://google.com";
-  }
   render() {
+    const value = 1;
     return (
-      <div>
-        Google: <a href={this.getUrl()}>{this.getUrl}</a>
-      </div>
+      <>
+        {1 + 1 === 2 ? <div>딩동댕</div> : <div>땡</div>}
+        {1 + 1 === 2 && <div>맞아요!</div>}
+        {(function () {
+          if (value === 1) return <div>하나</div>;
+        })()}
+        {(() => {
+          if (value === 1) return <div>둘</div>;
+        })()}
+      </>
     );
   }
 }

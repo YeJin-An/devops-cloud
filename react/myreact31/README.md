@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+## React의 문법
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+(1) import
+-> 모듈을 불러오는 경우
 
-## Available Scripts
+(2) export
+-> 다른 모듈에서 import하여 사용하도록 하기위한 방법
+-> 단 한개만 사용할 수 있음.
+-> 내보낼 대표값이므로 메인에 해당하는 값을 고려.
 
-In the project directory, you can run:
+// import (usestate, component) from "react';
+--> React.Component 기재하지 않아도
+Component로 표기 가능
 
-### `yarn start`
+// es6의 export
+--> export의 종류
+[ 1. Named exports , 2. Default exports ]
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+(3) Component
+-> React.Component를 확장(extends)해서
+컴포넌트를 만드는 것
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+(4) render
+-> 컴포넌트의 UI에 대한 설명을 반환하는 기능
+-> HTML DOM을 렌더링하여 사용자에게 보여주는 역할
+// HTML DOM은 가상 DOM을 의미,,
+-> 마운트 될때, state에 변화가 일어나
+DOM의 리렌더링 필요
 
-### `yarn test`
+// react UI라이브러리
+react-dom UI라이브러리를 출려하는 역할 수행
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-> React 0.14 버전이 도입후,
+-> React는 1. core 라이브러리 , 2. DOM adapter
 
-### `yarn build`
+// 마운트란?
+--> 저장 장치에 접근할 수 있는 경로를 디렉터리 구조에
+편입시키는 작업
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## JSX
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Javascript + XML -> 기존 바자스크립트의 확장 문법
+2. 바벨의 JSX 로더를 통해 native javascript로 변경..
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-- 함수 호출로 변환
+---> type, props, children을 의미..
 
-### `yarn eject`
+(1) 낙타표기법
+--> 각 단어의 첫 문자를 대문자로 표기
+--> 맨 처음 문자는 소문자로 표기
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+(2) 태그를 반드시 닫혀야 합니다.
+--> 닫히지 않으면 Failed to compile 에러가 발생
+페이지가 로드되지 않습니다.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+(3) 단일 루트 노드
+-> 리액트 텀포넌트는 단일 루트 노드만 렌더링 가능
+-> 반드시 하나의 엘리먼트로 감사져 있어야 함.
+// 이것은 자바 스크립드의 특징
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+// 만일 단일 루트 노드를 지원되지 않는 경우
+Fragment를 사용가능
+<Fragment><div></div></Fragment>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+(4) javascript 동적 값 할당은 { }
+-> 자바스크립트의 객체를 JSX내 사용시 { } 사용.
 
-## Learn More
+// let, const == block scope
+// 함수 단위 scope var
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+//--> 스코프란?
+참조 대상 식별자
+(다른 코드가 자신을 참조할 수 있는 거)
+를 찾아내기 위한 규칙
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+(5) 조건부 렌더링
+-> JSX 내부에서 조건부 렌더링할 때
+삼항 연산자 or AND연산자를 사용하여 if 불가능
+-> 즉시 실행 함수(IIFE)를 사용해야 한다.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+{(() => {
+if (value === 1) return <div>둘</div>;
+})()}
+이름은 화살표 함수
+--> this.arguments, super 개념이 없는 익명 함수
