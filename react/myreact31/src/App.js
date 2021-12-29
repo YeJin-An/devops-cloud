@@ -6,12 +6,9 @@ import DefaultProps from "./pages/test";
 class App extends Component {
   render() {
     return (
-      <div>
-        {
-          //<h1 title={this.props.title} id={this.props.id}>
-        }
-        <h1 {...this.props}>Hello, {this.props.frameworkName} world react!</h1>
-      </div>
+      <>
+        <DefaultProps />
+      </>
     );
   }
 }
