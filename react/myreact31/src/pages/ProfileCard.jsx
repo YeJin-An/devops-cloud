@@ -2,9 +2,6 @@ import React from "react";
 import "./ProfileCard.css";
 import profile from "./member1.jpg";
 // import { IoMdPerson } from "react-icons/io";
-// import { VscAccount } from "react-icons/vsc";
-// import { AiFillPhone, AiFillFolder } from "react-icons/ai";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -14,6 +11,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function ProfileCard() {
+  const [profileimage, setprofileimage] = useState(0);
+  const [name, setname] = useState([]);
+  const [role, setrole] = useState([]);
+  const [facebookUrl, serfacebookUrl] = useState([]);
+  const [email, setemail] = useState([]);
+
+  const handleClick = (value) => {
+    setprofileimage(useState(value + 1));
+  };
   return (
     <>
       <body class="member1">
