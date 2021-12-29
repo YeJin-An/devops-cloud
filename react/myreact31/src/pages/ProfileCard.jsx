@@ -1,9 +1,9 @@
 import React from "react";
 import "./ProfileCard.css";
 import profile from "./member1.jpg";
-import { IoMdPerson } from "react-icons/io";
-import { VscAccount } from "react-icons/vsc";
-import { AiFillPhone, AiFillFolder } from "react-icons/ai";
+// import { IoMdPerson } from "react-icons/io";
+// import { VscAccount } from "react-icons/vsc";
+// import { AiFillPhone, AiFillFolder } from "react-icons/ai";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
