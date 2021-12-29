@@ -2,6 +2,7 @@ import React from "react";
 import "./ProfileCard.css";
 import profile from "./member1.jpg";
 // import { IoMdPerson } from "react-icons/io";
+import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -9,8 +10,12 @@ import {
   faCoffee,
   faSpinner,
 } from "@fortawesome/free-solid-svg-icons";
+import propTypes from "prop-types";
+import propTypes from "prop-types";
 
 function ProfileCard() {
+
+  }
   return (
     <>
       <body class="member1">

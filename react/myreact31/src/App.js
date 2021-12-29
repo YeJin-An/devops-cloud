@@ -7,7 +7,13 @@ class App extends Component {
   render() {
     return (
       <>
-        <DefaultProps />
+        <DefaultProps
+          profileimage="log"
+          name="이름"
+          role="role"
+          facebookUrl="Url"
+          email="ejs"
+        />
       </>
     );
   }
