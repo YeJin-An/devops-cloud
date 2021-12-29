@@ -3,7 +3,7 @@ import React, { Component, useState } from "react";
 function makeLottoNumbers() {
   let lotto = [];
 
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 7; i++) {
     let num = Math.floor(Math.random() * 44) + 1;
 
     for (let j in lotto) {

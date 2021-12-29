@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import PageLotto from "./pages/PageLotto";
+import ProfileCard from "./pages/ProfileCard";
 // import "./styles/PageLotto.css";
 
 function App() {
   return (
     <>
-      <PageLotto />
+      <ProfileCard />
     </>
   );
 }

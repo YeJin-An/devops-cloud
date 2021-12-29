@@ -1,5 +1,4 @@
 @charset 'utf-8';
-@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 
 * {
   margin: 0px;
@@ -16,15 +15,15 @@ a {
 body {
   background-color: #ebfaff;
 }
-body.member1{
-	background-color: #ebfaff;
+body.member1 {
+  background-color: #ebfaff;
 }
-body.member1 section article.profile img{
-	box-shadow: 5px 15px 30px rgba(173,326,230,0,8);
+body.member1 section article.profile img {
+  box-shadow: 5px 15px 30px rgba(173, 326, 230, 0, 8);
 }
-body.member1 section a.btnView{
-	background: linear-gradient(45deg,#4affff, #35e0f7);
-	box-shadow: 5px 10px 20px rgba(0,255,255,0.493);
+body.member1 section a.btnView {
+  background: linear-gradient(45deg, #4affff, #35e0f7);
+  box-shadow: 5px 10px 20px rgba(0, 255, 255, 0.493);
 }
 section {
   width: 340px;
@@ -44,7 +43,7 @@ section nav.menu::after {
 }
 section nav.menu a {
   font-size: 20px;
-  color: #666;
+  color: rgb(0, 0, 0);
 }
 section nav.menu a:nth-of-type(1) {
   float: left;
@@ -149,7 +148,7 @@ section nav.others a:nth-of-type(4) {
   background-color: #a794fd;
   box-shadow: 5px 5px 10px rgba(167, 148, 253, 0.7);
 }
-section nav.others a.on{
-	opacity: 1,
-	filter: saturate(1);
+section nav.others a.on {
+  opacity: 1;
+  filter: saturate(1);
 }
