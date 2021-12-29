@@ -5,6 +5,14 @@ import { IoMdPerson } from "react-icons/io";
 import { VscAccount } from "react-icons/vsc";
 import { AiFillPhone, AiFillFolder } from "react-icons/ai";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBars,
+  faStickyNote,
+  faCoffee,
+  faSpinner,
+} from "@fortawesome/free-solid-svg-icons";
+
 function ProfileCard() {
   return (
     <>
@@ -12,10 +20,10 @@ function ProfileCard() {
         <section>
           <nav class="menu">
             <a href="#">
-              <IoMdPerson />
+              <FontAwesomeIcon icon={faBars} />
             </a>
             <a href="#">
-              <VscAccount />
+              <FontAwesomeIcon icon={faStickyNote} />
             </a>
           </nav>
 
@@ -33,13 +41,13 @@ function ProfileCard() {
           <ul class="contact">
             <li>
               <i>
-                <AiFillPhone />{" "}
+                <FontAwesomeIcon icon={faCoffee} />{" "}
               </i>
               <span>Visit My Facebook page.</span>
             </li>
             <li>
               <i>
-                <AiFillFolder />{" "}
+                <FontAwesomeIcon icon={faSpinner} />{" "}
               </i>
               <span>hadaboni80@naver.com</span>
             </li>
