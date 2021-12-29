@@ -1,6 +1,6 @@
 import React from "react";
 import "./ProfileCard.css";
-import profile from "member1.jpg";
+import profile from "./member1.jpg";
 import { IoMdPerson } from "react-icons/io";
 import { VscAccount } from "react-icons/vsc";
 import { AiFillPhone, AiFillFolder } from "react-icons/ai";
@@ -20,7 +20,7 @@ function ProfileCard() {
           </nav>
 
           <article class="profile">
-            <img src={require("./member1.jpg")} />
+            <img src={profile} />
 
             <h1>DOCODELAB</h1>
             <h2>UI/UX INTERACTIVE DEVELOER</h2>
