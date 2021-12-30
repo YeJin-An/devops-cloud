@@ -1,26 +1,26 @@
-import React, { Component } from "react";
-// prop-types [ yarn add prop-types ]
-import PropTypes from "prop-types";
+import React from "react";
+import ReactDOM from "react-dom";
 
-class DefaultProps extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { input: "" };
-  }
-  cjamgeinput(e) {
-    this.setState({ input: e.targer.value });
-  }
+const user = {
+  firstName: "jina",
+  lastName: "kim",
+};
+function today() {
+  let year = new Date().getFullYear();
+  let month = new Date().getMonth() + 1;
+  let day = new Date().getDate();
+  return year + "/" + month + "/" + day;
+}
+class HelloWorld extends React.Component {
   render() {
     return (
-      <div>
-        <input
-          type="text"
-          value={this.state.input}
-          onChange={this.changeinput.bind(this)}
-        ></input>
-      </div>
+      <>
+        <h1>Hello, {user.firstName}</h1>
+        <h4>This is {today()}</h4>
+      </>
     );
   }
 }
 
-export default DefaultProps;
+ReactDOM.render(<HelloWorld />, document.getElementById("root"));
+export default HelloWorld;
