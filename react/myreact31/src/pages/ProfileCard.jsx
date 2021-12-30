@@ -11,12 +11,13 @@ import {
 
 function ProfileCard() {
   const coponents = {
-    profileimage: [],
-    name: [],
-    role: [],
-    fackbookUrl: [],
-    email: [],
+    profileimage: "",
+    name: "",
+    role: "",
+    facebookUrl: "",
+    email: "",
   };
+
   return (
     <>
       <body class="member1">
