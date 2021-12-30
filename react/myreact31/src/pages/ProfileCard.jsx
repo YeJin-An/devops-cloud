@@ -9,20 +9,14 @@ import {
   faSpinner,
 } from "@fortawesome/free-solid-svg-icons";
 
+const coponents = {
+  profileimage: "ddd",
+  name: "dd",
+  role: "dd",
+  fackbookUrl: "dd",
+  email: "dd",
+};
 function ProfileCard() {
-  const Mycomponents = {
-    profile: function profileCard(props) {
-      return (
-        <>
-          {props.profileimage}
-          {props.name}
-          {props.role}
-          {props.facebookUrl}
-          {props.email}
-        </>
-      );
-    },
-  };
   return (
     <>
       <body class="member1">
@@ -39,11 +33,11 @@ function ProfileCard() {
           <article class="profile">
             <img src={profile} />
 
-            <h1>{profile}</h1>
-            <h2>UI/UX INTERACTIVE DEVELOER</h2>
+            <h1>{coponents.profileimage}</h1>
+            <h2>{coponents.name}</h2>
             <a href="#" class="btnView">
               {" "}
-              VIEW MORE
+              {coponents.role}
             </a>
           </article>
 
@@ -52,13 +46,13 @@ function ProfileCard() {
               <i>
                 <FontAwesomeIcon icon={faCoffee} />{" "}
               </i>
-              <span>Visit My Facebook page.</span>
+              <span>{coponents.fackbookUrl}</span>
             </li>
             <li>
               <i>
                 <FontAwesomeIcon icon={faSpinner} />{" "}
               </i>
-              <span>hadaboni80@naver.com</span>
+              <span>{coponents.email}</span>
             </li>
           </ul>
           <nav class="others">
