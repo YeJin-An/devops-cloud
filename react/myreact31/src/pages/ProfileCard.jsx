@@ -9,14 +9,14 @@ import {
   faSpinner,
 } from "@fortawesome/free-solid-svg-icons";
 
-const coponents = {
-  profileimage: "ddd",
-  name: "dd",
-  role: "dd",
-  fackbookUrl: "dd",
-  email: "dd",
-};
 function ProfileCard() {
+  const coponents = {
+    profileimage: [],
+    name: [],
+    role: [],
+    fackbookUrl: [],
+    email: [],
+  };
   return (
     <>
       <body class="member1">
