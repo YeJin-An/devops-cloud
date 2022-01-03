@@ -1,5 +1,5 @@
-import Counter from "./pages/Conter";
-import "./App.css";
+import Counter from './pages/Conter';
+import './App.css';
 
 function App() {
   return <Counter initialValue={10} />;
