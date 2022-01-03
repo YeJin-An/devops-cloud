@@ -8,7 +8,7 @@ function reducer(action, prevState) {
     return prevState - amount;
   }
 }
-const defaultStyle = {};
+
 const color = ['red', 'green', 'blue'];
 
 function Counter3({ name }) {
@@ -17,22 +17,33 @@ function Counter3({ name }) {
   const handleplus = (prevValue) => {
     const action = { type: 'plus', amount: 1 };
     setvalue((prevValue) => {
-      return reducer(action, prevValue), color[0];
+      return reducer(action, prevValue);
     });
   };
   const handleMinus = (prevValue) => {
     const action = { type: 'Minus', amount: 1 };
     setvalue((prevValue) => {
-      return reducer(action, prevValue), color[1];
+      return reducer(action, prevValue);
     });
   };
   return (
-    <>
-      <h1 style={{ ...defaultStyle, backgroundColor: color }}>{value}</h1>
+    <div>
+      <h1>Counter3</h1>
+      <div style={{ ...defaultStyle, backgroundColor: color }}>{value}</div>
       <button onClick={handleplus}>+</button>
       <button onClick={handleMinus}>-</button>
-    </>
+    </div>
   );
 }
+const defaultStyle = {
+  width: '100px',
+  height: '100px',
+  borderRadius: '50px',
+  lineHeight: '100px',
+  textAlign: 'center',
+  display: 'inline-block',
+  fontSize: '3rem',
+  userSelect: 'none',
+};
 
 export default Counter3;
