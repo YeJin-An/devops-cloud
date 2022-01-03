@@ -11,12 +11,12 @@ function dispath(action, prevState) {
 }
 
 function dispath_color(action, prevState) {
-  const { type, color } = action;
-  if (type === 'green') {
+  const { CHANGE_COLOR, color } = action;
+  if (CHANGE_COLOR === 'green') {
     return color;
-  } else if (type === 'blue') {
+  } else if (CHANGE_COLOR === 'blue') {
     return color;
-  } else if (type === 'red') {
+  } else if (CHANGE_COLOR === 'red') {
     return color;
   }
 }
@@ -39,35 +39,44 @@ function Counter2({ initvalue }) {
     });
   };
   const handleGreen = (prevColor) => {
-    const action = { type: 'green', color: 'green' };
+    const action = { CHANGE_COLOR: 'green', color: 'green' };
     setcolor((prevColor) => {
       return dispath_color(action, prevColor);
     });
   };
   const handleBlue = (prevColor) => {
-    const action = { type: 'blue', color: 'blue' };
+    const action = { CHANGE_COLOR: 'blue', color: 'blue' };
     setcolor((prevColor) => {
       return dispath_color(action, prevColor);
     });
   };
   const handleRed = (prevColor) => {
-    const action = { type: 'red', color: 'red' };
+    const action = { CHANGE_COLOR: 'red', color: 'red' };
     setcolor((prevColor) => {
       return dispath_color(action, prevColor);
     });
   };
+  const defaultStyle = {};
 
   return (
     <>
       <h1>Counter</h1>
+      <div style={{ ...defaultStyle, backgroundColor: color }}>{value}</div>
       {value}
       {color}
       <hr />
       <button onClick={handleplus}>증가</button>
       <button onClick={handleminus}>감소</button>
-      <button onClick={handleGreen}>green</button>
-      <button onClick={handleBlue}>blue</button>
-      <button onClick={handleRed}>red</button>
+
+      <button onClick={handleGreen} style={{ color: 'green' }}>
+        green
+      </button>
+      <button onClick={handleBlue} style={{ color: 'blue' }}>
+        blue
+      </button>
+      <button onClick={handleRed} style={{ color: 'red' }}>
+        red
+      </button>
     </>
   );
 }
