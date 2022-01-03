@@ -19,6 +19,7 @@ function reducer_color(action, prevState) {
     return color;
   }
 }
+const defaultStyle = {};
 
 function Counter2({ initvalue }) {
   const [value, setvalue] = useState(10);
@@ -55,23 +56,12 @@ function Counter2({ initvalue }) {
       return reducer_color(action, prevColor);
     });
   };
-  const defaultStyle = {
-    width: '100px',
-    height: '100px',
-    borderRadius: '50px',
-    lineHeight: '100px',
-    textAlign: 'center',
-    display: 'inline-block',
-    fontSize: '3rem',
-    userSelect: 'none',
-  };
 
   return (
     <>
       <h1>Counter</h1>
       <div style={{ ...defaultStyle, backgroundColor: color }}>{value}</div>
-      {value}
-      {color}
+      {value} {color}
       <hr />
       <button onClick={handleplus}>증가</button>
       <button onClick={handleminus}>감소</button>
