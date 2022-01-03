@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, createContext } from 'react';
 
 function reducer(action, prevState) {
   const { type, amount } = action;
@@ -11,17 +11,27 @@ function reducer(action, prevState) {
 
 const color = ['red', 'green', 'blue'];
 
+// const ColorContext = createContext({ color: 'blue' });
+
 function Counter3({ name }) {
   const [value, setvalue] = useState(0);
+  const [color, setcolor] = useState('yellow');
+
+  const vcolor = {
+    state: { color, subcolor },
+    action: { setColor, setSubcolor },
+  };
 
   const handleplus = (prevValue) => {
     const action = { type: 'plus', amount: 1 };
+    setcolor({ color: 'blue' });
     setvalue((prevValue) => {
       return reducer(action, prevValue);
     });
   };
   const handleMinus = (prevValue) => {
     const action = { type: 'Minus', amount: 1 };
+    setcolor({ color: 'green' });
     setvalue((prevValue) => {
       return reducer(action, prevValue);
     });
@@ -30,8 +40,12 @@ function Counter3({ name }) {
     <div>
       <h1>Counter3</h1>
       <div style={{ ...defaultStyle, backgroundColor: color }}>{value}</div>
-      <button onClick={handleplus}>+</button>
-      <button onClick={handleMinus}>-</button>
+      <button onClick={handleplus} color={vcolor}>
+        +
+      </button>
+      <button onClick={handleMinus} color={vcolor}>
+        -
+      </button>
     </div>
   );
 }
