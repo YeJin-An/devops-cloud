@@ -56,7 +56,16 @@ function Counter2({ initvalue }) {
       return dispath_color(action, prevColor);
     });
   };
-  const defaultStyle = {};
+  const defaultStyle = {
+    width: '100px',
+    height: '100px',
+    borderRadius: '50px',
+    lineHeight: '100px',
+    textAlign: 'center',
+    display: 'inline-block',
+    fontSize: '3rem',
+    userSelect: 'none',
+  };
 
   return (
     <>
