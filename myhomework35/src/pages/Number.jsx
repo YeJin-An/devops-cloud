@@ -12,31 +12,60 @@ const defaultStyle = {
 };
 
 function Number({ initialvalue }) {
-  const [state, setState] = useState({ numbers: 7, colors: 'lightpink' });
+  const [state, setState] = useState({
+    numbers: [0, 0, 0, 0, 0, 0, 0],
+    colors: [
+      '#1B62BF',
+      '#1755A6',
+      '#37A647',
+      '#F29F05',
+      '#F23838',
+      'purple',
+      'pink',
+    ],
+  });
   const { numbers, colors } = state;
   return (
     <>
-      <div style={{ ...defaultStyle, margin: '30px', backgroundColor: colors }}>
-        {numbers}
+      <div
+        style={{ ...defaultStyle, margin: '30px', backgroundColor: colors[0] }}
+      >
+        {numbers[0]}
       </div>
-      <div style={{ ...defaultStyle, margin: '30px', backgroundColor: colors }}>
-        {numbers}
+      <div
+        style={{ ...defaultStyle, margin: '30px', backgroundColor: colors[1] }}
+      >
+        {numbers[1]}
       </div>
-      <div style={{ ...defaultStyle, margin: '30px', backgroundColor: colors }}>
-        {numbers}
+      <div
+        style={{ ...defaultStyle, margin: '30px', backgroundColor: colors[2] }}
+      >
+        {numbers[2]}
       </div>
-      <div style={{ ...defaultStyle, margin: '30px', backgroundColor: colors }}>
-        {numbers}
+      <div
+        style={{ ...defaultStyle, margin: '30px', backgroundColor: colors[3] }}
+      >
+        {numbers[3]}
       </div>
-      <div style={{ ...defaultStyle, margin: '30px', backgroundColor: colors }}>
-        {numbers}
+      <div
+        style={{ ...defaultStyle, margin: '30px', backgroundColor: colors[4] }}
+      >
+        {numbers[4]}
       </div>
-      <div style={{ ...defaultStyle, margin: '30px', backgroundColor: colors }}>
-        {numbers}
+      <div
+        style={{ ...defaultStyle, margin: '30px', backgroundColor: colors[5] }}
+      >
+        {numbers[5]}
       </div>
-      <div style={{ ...defaultStyle, margin: '30px', backgroundColor: colors }}>
-        {numbers}
+      <div
+        style={{ ...defaultStyle, margin: '30px', backgroundColor: colors[6] }}
+      >
+        {numbers[6]}
       </div>
+      <hr />
+      <button>GENERATE_NUMBERS </button>
+      <button>SHUFFLE_NUMBERS </button>
+      <button>SHUFFLE_COLORS </button>
     </>
   );
 }
