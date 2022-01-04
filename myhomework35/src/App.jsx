@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   return (
     <>
-      <Answer />
+      <Answer title="{Lotto}" />
     </>
   );
 }

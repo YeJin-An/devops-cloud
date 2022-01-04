@@ -1,7 +1,12 @@
-function Answer() {
+import { useState } from 'react';
+
+function Answer({ title }) {
+  const [state, usestate] = useState(1);
   return (
     <>
-      <h1>hello</h1>
+      {title && <h2>{title}</h2>}
+      <hr />
+      {state}
     </>
   );
 }
