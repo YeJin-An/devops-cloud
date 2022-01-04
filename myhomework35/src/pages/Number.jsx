@@ -11,7 +11,7 @@ const defaultStyle = {
   userSelect: 'none',
 };
 
-function reducer(action, prevState) {
+function dispatch(action, prevState) {
   const { type, numbers } = action;
   if (type === 'GENERATE_NUMBERS') {
     return prevState + numbers;
@@ -42,6 +42,7 @@ function Number({ initialvalue }) {
   const SHUFFLE_COLORS = (prevValue) => {};
   return (
     <>
+      <h2 style={{ margin: '30px' }}>useState 버진</h2>
       <div
         style={{ ...defaultStyle, margin: '30px', backgroundColor: colors[0] }}
       >
