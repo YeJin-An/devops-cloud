@@ -41,7 +41,16 @@ function Numbers2({ title }) {
     <>
       <div>{title && <h2>useReducer{title}</h2>}</div>
       {zip(state.numbers, state.colors).map(([number, color]) => (
-        <Circle number={number} backgroundColor={color} />
+        <Circle
+          number={number}
+          backgroundColor={color}
+          onClick={() => {
+            console.log("clicked");
+          }}
+          onContextMenu={() => {
+            console.log("right clicked");
+          }}
+        />
       ))}
       <hr />
       <button onClick={() => dispatch({ type: "GENERATE_NUMBERS" })}>
