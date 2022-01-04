@@ -1,10 +1,11 @@
-import Number from './pages/Number';
+//import Number from './pages/Number';
+import Answer from './pages/Answer';
 import './App.css';
 
 function App() {
   return (
     <>
-      <Number initialvalue={'One'} />
+      <Answer />
     </>
   );
 }
