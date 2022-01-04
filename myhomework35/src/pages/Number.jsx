@@ -11,6 +11,17 @@ const defaultStyle = {
   userSelect: 'none',
 };
 
+function reducer(action, prevState) {
+  const { type, numbers } = action;
+  if (type === 'GENERATE_NUMBERS') {
+    return prevState + numbers;
+  } else if (type === 'SHUFFLE_NUMBERS') {
+    return prevState + numbers;
+  } else if (type === 'SHUFFLE_COLORS') {
+    return prevState + numbers;
+  }
+}
+
 function Number({ initialvalue }) {
   const [state, setState] = useState({
     numbers: [0, 0, 0, 0, 0, 0, 0],
@@ -25,6 +36,10 @@ function Number({ initialvalue }) {
     ],
   });
   const { numbers, colors } = state;
+
+  const GENERATE_NUMBER = (prevValue) => {};
+  const SHUFFLE_NUMBERS = (prevValue) => {};
+  const SHUFFLE_COLORS = (prevValue) => {};
   return (
     <>
       <div
@@ -63,9 +78,9 @@ function Number({ initialvalue }) {
         {numbers[6]}
       </div>
       <hr />
-      <button>GENERATE_NUMBERS </button>
-      <button>SHUFFLE_NUMBERS </button>
-      <button>SHUFFLE_COLORS </button>
+      <button onClick={GENERATE_NUMBER}>GENERATE_NUMBERS </button>
+      <button onClick={SHUFFLE_NUMBERS}>SHUFFLE_NUMBERS </button>
+      <button onClick={SHUFFLE_COLORS}>SHUFFLE_COLORS </button>
     </>
   );
 }
