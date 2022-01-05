@@ -31,7 +31,7 @@ function TodoList() {
       // todoList 상탯값을 변경하는 것은 아닙니다. (배열의 push를 사용 X)
 
       setTodoList((prevTodoList) => {
-        return [...prevTodoList, { content: inputText }];
+        return [...prevTodoList, { contnet: inputText }];
       });
       setInputText('');
     }
@@ -49,7 +49,7 @@ function TodoList() {
       />
 
       {todoList.map((todo, index) => (
-        <div onClick={() => removeTodo(index)}>{todo.content}</div>
+        <div onClick={() => removeTodo(index)}>{todo.contnet}</div>
       ))}
     </>
   );
