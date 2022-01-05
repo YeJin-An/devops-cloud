@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useReducer } from 'react';
 import './Counter.css';
 
 function dispath(action, prevState) {
@@ -11,7 +11,7 @@ function dispath(action, prevState) {
 }
 
 function Counter() {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useReducer(dispath, 0);
 
   const handleplus = () => {
     const action = { type: 'plus', amount: 1 };
