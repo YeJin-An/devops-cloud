@@ -21,9 +21,14 @@ function TodoList() {
   };
 
   const appendInputText = (e) => {
-    // console.log("e.key: ", e.key);
     if (e.key === "Enter") {
+      // todoList 배열 끝에 inputText를 추가합니다.
+      // inputText를 다시 비웁니다.
+
       console.log("inputText: ", inputText);
+
+      // setTodoList에 함수를 넘기는 것.
+      // todoList 상탯값을 변경하는 것은 아닙니다. (배열의 Push를 사용 x)
     }
   };
 
