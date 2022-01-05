@@ -5,7 +5,7 @@ import "./App.css";
 function App() {
   return (
     <Wrapper>
-      <Hello name="react" color="lightgreen" />
+      <Hello name="react" color="lightgreen" isSpecial={true} />
       <Hello color="lightpink" />
     </Wrapper>
   );
