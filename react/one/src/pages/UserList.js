@@ -9,7 +9,7 @@ function User({ user }) {
   );
 }
 
-function UserList() {
+function UserList({ users }) {
   const users = [
     {
       id: 1,
@@ -23,10 +23,6 @@ function UserList() {
     },
   ];
 
-  //const nextId = useRef(4);
-  //const onCreate = () => {
-  //  nextId.current += 1;
-  //};
   return (
     <>
       {users.map((user) => (
