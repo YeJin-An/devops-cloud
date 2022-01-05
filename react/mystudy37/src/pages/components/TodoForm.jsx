@@ -5,8 +5,6 @@ function TodoForm() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    // console.log("changed", name, value);
-
     setFieldValues({
       ...fieldValues,
       [name]: value,
@@ -22,7 +20,6 @@ function TodoForm() {
         <option>Two</option>
         <option>Three</option>
       </select>
-
       <hr />
       {JSON.stringify(fieldValues)}
     </>
