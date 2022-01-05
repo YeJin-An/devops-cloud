@@ -26,7 +26,7 @@ function UserList() {
   return (
     <>
       {users.map((user) => (
-        <User user={user} />
+        <User user={user} key={user.id} />
       ))}
     </>
   );
