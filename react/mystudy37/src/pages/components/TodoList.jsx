@@ -1,4 +1,5 @@
 import { useState } from "react";
+import TodoForm from "./TodoForm";
 
 function TodoList() {
   const INITIAL_STATE = [
@@ -34,6 +35,7 @@ function TodoList() {
   return (
     <>
       <h2>TodoList</h2>
+      <TodoForm />
 
       <input
         type="text"
