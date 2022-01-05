@@ -1,7 +1,7 @@
-function Hello(Props) {
+function Hello({ color, name }) {
   return (
     <>
-      <h2 style={{ color: Props.color }}>Hello.{Props.name}</h2>
+      <h2 style={{ color }}>Hello.{name}</h2>
     </>
   );
 }
