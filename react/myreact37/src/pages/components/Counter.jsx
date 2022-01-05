@@ -16,16 +16,20 @@ function Counter() {
   const handleplus = () => {
     setValue((prevValue) => prevValue + 1);
   };
-  const handleminus = () => {
-    setValue((prevValue) => prevValue + 1);
+  const handleminus = (e) => {
+    e.preventDefault();
+    setValue((prevValue) => prevValue - 1);
   };
   return (
     <>
-      <div className="counter" style={{ backgroundColor: 'lightpink' }}>
+      <div
+        className="counter"
+        style={{ backgroundColor: 'lightpink' }}
+        onClick={handleplus}
+        onContextMenu={handleminus}
+      >
         {value}
       </div>
-      <button onClick={handleplus}>+1</button>
-      <button onClick={handleminus}>-1</button>
     </>
   );
 }
