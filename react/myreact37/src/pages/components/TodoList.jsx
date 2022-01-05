@@ -17,7 +17,7 @@ function TodoList() {
   };
 
   const changedInputText = (e) => {
-    setInputText(e.targer.value);
+    setInputText(e.target.value);
   };
 
   const appendInputText = (e) => {
