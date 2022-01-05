@@ -3,7 +3,7 @@ import PageCounter from './pages/PageCounter';
 function App() {
   return (
     <>
-      <PageCounter />;
+      <PageCounter />
     </>
   );
 }
