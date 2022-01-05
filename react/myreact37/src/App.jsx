@@ -1,7 +1,11 @@
-import First from "./pages/First";
+import PageCounter from './pages/PageCounter';
 
 function App() {
-  return <First />;
+  return (
+    <>
+      <PageCounter />;
+    </>
+  );
 }
 
 export default App;
