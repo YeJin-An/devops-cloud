@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TodoForm from "./TodoForm";
+import "./TodoList.css";
 
 function TodoList() {
   const INITIAL_STATE = [
@@ -33,9 +34,8 @@ function TodoList() {
   };
 
   return (
-    <>
+    <div className="todo-list">
       <h2>TodoList</h2>
-      <TodoForm />
 
       <input
         type="text"
@@ -46,7 +46,8 @@ function TodoList() {
       {todoList.map((todo, index) => (
         <div onClick={() => removeTodo(index)}>{todo.content}</div>
       ))}
-    </>
+      <TodoForm />
+    </div>
   );
 }
 export default TodoList;
