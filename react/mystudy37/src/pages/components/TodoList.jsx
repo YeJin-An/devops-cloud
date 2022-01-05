@@ -1,5 +1,7 @@
+import useFieldValues from "hooks/useFieldValues";
 import { useState } from "react";
 import TodoForm from "./TodoForm";
+import Todo from "./Todo";
 import "./TodoList.css";
 
 function TodoList() {
@@ -11,11 +13,24 @@ function TodoList() {
 
   const [inputText, setInputText] = useState("");
   const [todoList, setTodoList] = useState(INITIAL_STATE);
+  const [fieldValues, handleChange, clearfieldValues] = useFieldValues({
+    content: "",
+    color: "Darkgreen",
+  });
 
   const removeTodo = (todoIndex) => {
     setTodoList((prevTodoList) =>
       prevTodoList.filter((__, index) => index !== todoIndex)
     );
+  };
+
+  const appendTodo = () => {
+    console.log("새로운 todo를 추가하겠습니다.");
+
+    const todo = { ...fieldValues };
+
+    setTodoList((prevTodoList) => [...prevTodoList, todo]);
+    clearfieldValues();
   };
 
   const changedInputText = (e) => {
@@ -35,7 +50,7 @@ function TodoList() {
 
   return (
     <div className="todo-list">
-      <h2>TodoList</h2>
+      <h2>Todo List</h2>
 
       <input
         type="text"
@@ -44,9 +59,14 @@ function TodoList() {
         onKeyPress={appendInputText}
       />
       {todoList.map((todo, index) => (
-        <div onClick={() => removeTodo(index)}>{todo.content}</div>
+        <Todo todo={todo} onClick={() => removeTodo(index)} />
       ))}
-      <TodoForm />
+
+      <TodoForm
+        fieldValues={fieldValues}
+        handleChange={handleChange}
+        handleSubmit={appendTodo}
+      />
     </div>
   );
 }
