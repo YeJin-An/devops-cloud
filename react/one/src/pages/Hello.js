@@ -5,5 +5,8 @@ function Hello({ color, name }) {
     </>
   );
 }
+Hello.defaultProps = {
+  name: "디폴트",
+};
 
 export default Hello;
