@@ -1,12 +1,13 @@
+import Wrapper from "./pages/Wrapper";
 import Hello from "./pages/Hello";
 import "./App.css";
 
 function App() {
   return (
-    <>
-      <Hello name="react" color="lightgreen" />;
+    <Wrapper>
+      <Hello name="react" color="lightgreen" />
       <Hello color="lightpink" />
-    </>
+    </Wrapper>
   );
 }
 
