@@ -9,11 +9,17 @@ function TodoList() {
 
   const [todoList, setTodoList] = useState(INITIAL_STATE);
 
+  const removeTodo = (todoIndex) => {
+    setTodoList((prevTodoList) =>
+      prevTodoList.filter((__, index) => index !== todoIndex)
+    );
+  };
+
   return (
     <>
       <h2>TodoList</h2>
-      {todoList.map((todo) => (
-        <div>{todo.conent}</div>
+      {todoList.map((todo, index) => (
+        <div onClick={() => removeTodo(index)}>{todo.conent}</div>
       ))}
     </>
   );
