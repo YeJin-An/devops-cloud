@@ -1,7 +1,9 @@
+import PageTodoList from "./pages/PageTodoList";
+
 function App() {
   return (
     <>
-      <h2>App</h2>
+      <PageTodoList />
     </>
   );
 }
