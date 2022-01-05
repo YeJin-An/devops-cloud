@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-function useFieldValues() {
-  const [fieldValues, setFieldValues] = useState({});
+function useFieldValues(initialFieldValues) {
+  const [fieldValues, setFieldValues] = useState(initialFieldValues);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -9,6 +9,13 @@ function useFieldValues() {
     setFieldValues({
       ...fieldValues,
       [name]: value,
+    });
+
+    setFieldValues((prevFieldValues) => {
+      return {
+        ...prevFieldValues,
+        [name]: value,
+      };
     });
   };
 
