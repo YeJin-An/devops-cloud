@@ -7,6 +7,7 @@ const INITIAL_STATE = [
 ];
 
 function TodoList() {
+  const [inputText, setInputText] = useState('');
   const [todoList, setTodoList] = useState(INITIAL_STATE);
 
   const removeTodo = (todoIndex) => {
@@ -15,9 +16,26 @@ function TodoList() {
     );
   };
 
+  const changedInputText = (e) => {
+    setInputText(e.targer.value);
+  };
+
+  const appendInputText = (e) => {
+    console.log('e.key:', e.key);
+    if (e.key === 'Enter') {
+      console.log('inputText :', inputText);
+    }
+  };
+
   return (
     <>
       <h2>TodoList</h2>
+      <input
+        type="text"
+        value={inputText}
+        onChange={changedInputText}
+        onKeyPress={appendInputText}
+      />
       {todoList.map((todo, index) => (
         <div onClick={() => removeTodo(index)}>{todo.contnet}</div>
       ))}
