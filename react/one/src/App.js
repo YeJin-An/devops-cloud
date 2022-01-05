@@ -1,6 +1,7 @@
 import Wrapper from "./pages/Wrapper";
 import Hello from "./pages/Hello";
 import Counter from "./pages/Counter";
+import InputSample from "./pages/InpputSample";
 import "./App.css";
 
 function App() {
@@ -10,6 +11,8 @@ function App() {
       <Hello color="lightpink" />
       <hr />
       <Counter />
+      <hr />
+      <InputSample />
     </Wrapper>
   );
 }
