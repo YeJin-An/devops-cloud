@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 function InputSample() {
   const [inputs, setInputs] = useState({
@@ -8,6 +8,7 @@ function InputSample() {
     nickname: "",
   });
 
+  const nameInput = useRef();
   const { name, nickname } = inputs;
 
   const onChange = (e) => {
@@ -22,11 +23,20 @@ function InputSample() {
       name: "",
       nickname: "",
     });
+    nameInput.current.focus();
   };
+
+  // 포커스 잡기 -> focus() DOM API를 호출해주었기 때문
 
   return (
     <>
-      <input name="name" placehodler="이름" onChange={onChange} value={name} />
+      <input
+        name="name"
+        placehodler="이름"
+        onChange={onChange}
+        value={name}
+        ref={nameInput}
+      />
       <input
         name="nickname"
         placehodler="닉네임"
