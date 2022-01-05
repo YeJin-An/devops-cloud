@@ -29,20 +29,27 @@ function TodoList() {
 
       // setTodoList 에 함수를 넘기는 것.
       // todoList 상탯값을 변경하는 것은 아닙니다. (배열의 push를 사용 X)
+
+      setTodoList((prevTodoList) => {
+        return [...prevTodoList, { content: inputText }];
+      });
+      setInputText('');
     }
   };
 
   return (
     <>
       <h2>TodoList</h2>
+
       <input
         type="text"
         value={inputText}
         onChange={changedInputText}
         onKeyPress={appendInputText}
       />
+
       {todoList.map((todo, index) => (
-        <div onClick={() => removeTodo(index)}>{todo.contnet}</div>
+        <div onClick={() => removeTodo(index)}>{todo.content}</div>
       ))}
     </>
   );
