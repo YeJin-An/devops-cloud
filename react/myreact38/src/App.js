@@ -10,6 +10,7 @@ function App() {
         <Route path="/" element={<div>대문</div>} />
         <Route path="/counter" element={<PageRating />} />
         <Route path="/reviews" element={<Pagecomponents />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>
   );
