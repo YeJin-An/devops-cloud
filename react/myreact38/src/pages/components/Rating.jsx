@@ -9,7 +9,7 @@ function Rating({ score, type }) {
       <ul class="flex justify-center">
         {range(5).map((index) => (
           <Fragment key={index}>
-            {index < score ? <Filled /> : <Empty />}
+            <li key={index}>{index < score ? <Filled /> : <Empty />}</li>
           </Fragment>
         ))}
       </ul>
