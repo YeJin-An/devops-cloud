@@ -1,9 +1,9 @@
-import Rating from './pages/components/Rating';
+import Pagecomponents from './pages/Pagecomponents';
 
 function App() {
   return (
     <>
-      <Rating />
+      <Pagecomponents />
     </>
   );
 }

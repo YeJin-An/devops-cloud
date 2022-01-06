@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 
 const range = (size) => [...Array(size).keys()];
 
-function Rating({ score, type }) {
+function Rating({ score }) {
   return (
     <>
       <ul class="flex justify-center">
