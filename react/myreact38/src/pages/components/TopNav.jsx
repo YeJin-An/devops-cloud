@@ -2,23 +2,35 @@ import { Link } from 'react-router-dom';
 
 function TopNav() {
   return (
-    <div>
-      <ul>
+    <div className="my-3">
+      <ul classNAme="flex gap-4">
         <li>
-          <Link to="/">Home</Link>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <Link to="/todos">todos</Link>
+          <NavLink to="/todos">todos</NavLink>
         </li>
 
         <li>
-          <Link to="/reviews">Reviews</Link>
+          <NavLink to="/reviews">Reviews</NavLink>
         </li>
         <li>
-          <Link to="/Counter">Counter</Link>
+          <NavLink to="/Counter">Counter</NavLink>
         </li>
       </ul>
     </div>
+  );
+}
+
+function NavLink({ to, children }) {
+  return (
+    <Link
+      to={to}
+      className="pb-1 border-red-400 hover:border-b-4 
+      hover:text-red-400  duration-75 text-sm"
+    >
+      {children}
+    </Link>
   );
 }
 
